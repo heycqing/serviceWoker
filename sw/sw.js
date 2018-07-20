@@ -14,10 +14,10 @@ if(navigator.serviceWorker){
 
 const CACHE_NAME = 'service cache by cqing';
 const urlToCache =[
-    '/',
-    '/js/main.js',
-    '/css/main.css',
-    '/img/test.png'
+    '/sw/',
+    '/sw/js/main.js',
+    '/sw/css/main.css',
+    '/sw/img/test.png'
 ]
 
 // 安装事件
