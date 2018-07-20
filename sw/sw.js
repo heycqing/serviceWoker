@@ -29,3 +29,20 @@ self.addEventListener('install',function(event){
     )
 })
 
+// 更新事件
+self.addEventListener('fetch',function(event){
+    // 请求缓存并且响应;
+    event.respondWith(
+        caches.match(event.request).then(function(res){
+            if(response){
+            console.log('响应！')
+                
+                return res;
+                
+            }
+            
+            return fetch(event.request)
+        })
+    )
+})
+
