@@ -1,0 +1,23 @@
+{
+  "name": "servicewoker",
+  "version": "1.0.0",
+  "description": "🛠 a service Woker demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heycqing/serviceWoker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heycqing/serviceWoker/issues"
+  },
+  "homepage": "https://github.com/heycqing/serviceWoker#readme",
+  "devDependencies": {
+    "colors": "^1.4.0"
+  }
+}
