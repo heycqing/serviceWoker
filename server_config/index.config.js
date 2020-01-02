@@ -27,6 +27,13 @@ module.exports = {
         wma: "audio/x-ms-wma",
         wmv: "video/x-ms-wmv",
         xml: "text/xml"
-    }
+    },
+    isImg: [
+        'jpeg',
+        'jpg',
+        'png',
+        'gif',
+        'svg'
+    ]
 } 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,40 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <!-- <script src="./sw.js"></script> -->
 </head>
+
 <body>
     <h1>hahahahaha</h1>
-    <img src="./img/test.png" alt="">
+    <img src="./img/1.jpg" alt=""/>
+    <!-- <img src="https://csdnimg.cn/cdn/content-toolbar/csdn-logo_.png?v=20190924.1" /> -->
     <!-- <script src="./sw.js"></script> -->
     <!-- <script src="./test.js"></script> -->
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            // 注册service Woker事件；
+            navigator.serviceWorker.register('./sw.js',).then(registration => {
+                var serviceWorker;
+                if (registration.installing) {
+                    serviceWorker = registration.installing;
+                    console.log('注册中')
+                } else if (registration.waiting) {
+                    serviceWorker = registration.waiting;
+                    console.log('等待中')
+                } else if (registration.active) {
+                    serviceWorker = registration.active;
+                    console.log('注册成功')
+                }
+                if (serviceWorker) {
+                    serviceWorker.addEventListener('statechange', function (e) {
+                        console.log('状态变化为' + e.target.state);
+                    });
+                }
+            }).catch(error => {
+                console.log('没有注册成功: ', error);
+            })
+        }
 
-
+    </script>
 </body>
+
 </html>
