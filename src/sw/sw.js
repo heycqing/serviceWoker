@@ -1,10 +1,12 @@
-var CACHE_NAME_ = 'service-cache-by-cqing-v1.0';
+var CACHE_NAME_ = 'service-cache-by-cqing-v4.0';
 var cache_files = [
     './index.html',
     './js/main.js',
     './css/main.css',
     './img/test.png',
-    './img/1.jpg'
+    './img/1.jpg',
+    './index.sw.js',
+    './config.sw.js'
 ]
 
 // 安装事件

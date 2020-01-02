@@ -5,7 +5,7 @@ var colors = require('colors');
 
 var config = require('./server_config/index.config.js')
 
-var str = './src/sw/index.js' 
+var str = './src/sw/index.sw.js' 
 
 function setContentType(filepath){
     var theFile = path.extname(filepath);
